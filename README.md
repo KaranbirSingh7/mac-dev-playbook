@@ -8,20 +8,20 @@ This playbook installs and configures most of the software I use on my Mac for w
 
 This is a work in progress, and is mostly a means for me to document my current Mac's setup. I'll be evolving this playbook over time.
 
-*See also*:
+_See also_:
 
-  - [Boxen](https://github.com/boxen)
-  - [Battleschool](http://spencer.gibb.us/blog/2014/02/03/introducing-battleschool)
-  - [osxc](https://github.com/osxc)
-  - [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks) (the original inspiration for this project)
+- [Boxen](https://github.com/boxen)
+- [Battleschool](http://spencer.gibb.us/blog/2014/02/03/introducing-battleschool)
+- [osxc](https://github.com/osxc)
+- [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks) (the original inspiration for this project)
 
 ## Installation
 
-  1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-  2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html).
-  3. Clone this repository to your local drive.
-  4. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
-  5. Run `ansible-playbook main.yml -i inventory --ask-become-pass` inside this directory. Enter your account password when prompted.
+1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
+2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html).
+3. Clone this repository to your local drive.
+4. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
+5. Run `ansible-playbook main.yml -i inventory --ask-become-pass` inside this directory. Enter your account password when prompted.
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
@@ -29,8 +29,8 @@ This is a work in progress, and is mostly a means for me to document my current 
 
 You can use this playbook to manage other Macs as well; the playbook doesn't even need to be run from a Mac at all! If you want to manage a remote Mac, either another Mac on your network, or a hosted Mac like the ones from [MacStadium](https://www.macstadium.com), you just need to make sure you can connect to it with SSH:
 
-  1. (On the Mac you want to connect to:) Go to System Preferences > Sharing.
-  2. Enable 'Remote Login'.
+1. (On the Mac you want to connect to:) Go to System Preferences > Sharing.
+2. Enable 'Remote Login'.
 
 > You can also enable remote login on the command line:
 >
@@ -60,28 +60,28 @@ You can override any of the defaults configured in `default.config.yml` by creat
       - cowsay
       - git
       - go
-    
+
     mas_installed_apps:
       - { id: 443987910, name: "1Password" }
       - { id: 498486288, name: "Quick Resizer" }
       - { id: 557168941, name: "Tweetbot" }
       - { id: 497799835, name: "Xcode" }
-    
+
     composer_packages:
       - name: hirak/prestissimo
       - name: drush/drush
         version: '^8.1'
-    
+
     gem_packages:
       - name: bundler
         state: latest
-    
+
     npm_packages:
       - name: webpack
-    
+
     pip_packages:
       - name: mkdocs
-    
+
     configure_dock: true
     dockitems_remove: []
     dockitems_persist: []
@@ -92,51 +92,51 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 
 Applications (installed with Homebrew Cask):
 
-  - [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
-  - [Docker](https://www.docker.com/)
-  - [Dropbox](https://www.dropbox.com/)
-  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-  - [Google Chrome](https://www.google.com/chrome/)
-  - [Handbrake](https://handbrake.fr/)
-  - [Homebrew](http://brew.sh/)
-  - [LICEcap](http://www.cockos.com/licecap/)
-  - [LimeChat](http://limechat.net/mac/)
-  - [MacVim](http://macvim-dev.github.io/macvim/)
-  - [nvALT](http://brettterpstra.com/projects/nvalt/)
-  - [Sequel Pro](https://www.sequelpro.com/) (MySQL client)
-  - [Skitch](https://evernote.com/skitch/)
-  - [Slack](https://slack.com/)
-  - [Sublime Text](https://www.sublimetext.com/)
-  - [Transmit](https://panic.com/transmit/) (S/FTP client)
-  - [Vagrant](https://www.vagrantup.com/)
+- [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
+- [Docker](https://www.docker.com/)
+- [Dropbox](https://www.dropbox.com/)
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- [Google Chrome](https://www.google.com/chrome/)
+- [Handbrake](https://handbrake.fr/)
+- [Homebrew](http://brew.sh/)
+- [LICEcap](http://www.cockos.com/licecap/)
+- [LimeChat](http://limechat.net/mac/)
+- [MacVim](http://macvim-dev.github.io/macvim/)
+- [nvALT](http://brettterpstra.com/projects/nvalt/)
+- [Sequel Pro](https://www.sequelpro.com/) (MySQL client)
+- [Skitch](https://evernote.com/skitch/)
+- [Slack](https://slack.com/)
+- [Sublime Text](https://www.sublimetext.com/)
+- [Transmit](https://panic.com/transmit/) (S/FTP client)
+- [Vagrant](https://www.vagrantup.com/)
 
 Packages (installed with Homebrew):
 
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - go
-  - gpg
-  - hub
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
+- autoconf
+- bash-completion
+- doxygen
+- gettext
+- gifsicle
+- git
+- go
+- gpg
+- hub
+- httpie
+- iperf
+- libevent
+- sqlite
+- mcrypt
+- nmap
+- node
+- nvm
+- php
+- ssh-copy-id
+- cowsay
+- readline
+- openssl
+- pv
+- wget
+- wrk
 
 My [dotfiles](https://github.com/geerlingguy/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
 
@@ -148,23 +148,23 @@ Finally, there are a few other preferences and settings added on for various app
 
 It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
 
-  1. Install [Sublime Package Manager](http://sublime.wbond.net/installation).
-  2. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
-  3. Set trackpad tracking rate.
-  4. Set mouse tracking rate.
-  5. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
+1. Install [Sublime Package Manager](http://sublime.wbond.net/installation).
+2. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
+3. Set trackpad tracking rate.
+4. Set mouse tracking rate.
+5. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
 
 ### Configuration to be added:
 
-  - I have vim configuration in the repo, but I still need to add the actual installation:
-    ```
-    mkdir -p ~/.vim/autoload
-    mkdir -p ~/.vim/bundle
-    cd ~/.vim/autoload
-    curl https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > pathogen.vim
-    cd ~/.vim/bundle
-    git clone git://github.com/scrooloose/nerdtree.git
-    ```
+- I have vim configuration in the repo, but I still need to add the actual installation:
+  ```
+  mkdir -p ~/.vim/autoload
+  mkdir -p ~/.vim/bundle
+  cd ~/.vim/autoload
+  curl https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > pathogen.vim
+  cd ~/.vim/bundle
+  git clone git://github.com/scrooloose/nerdtree.git
+  ```
 
 ## Testing the Playbook
 

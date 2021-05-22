@@ -1,9 +1,9 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
@@ -68,25 +68,22 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
-  - docker
-  - dropbox
-  - firefox
-  - google-chrome
-  - handbrake
+  - iterm2
   - licecap
-  - sequel-pro
   - slack
   - sublime-text
-  - transmit
-  - vagrant
+  - bartender
+  - maccy
+  - alfred
+  - 1password
+  - tiles
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
-mas_email: ""
-mas_password: ""
+mas_email: ''
+mas_password: ''
 
-osx_script: "~/.osx --no-restart"
+osx_script: '~/.osx --no-restart'
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
