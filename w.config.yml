@@ -36,12 +36,13 @@ dotfiles_files:
 homebrew_installed_packages:
   - git
   - go
-  - sqlite
+  - cloudfoundry/tap/cf-cli
   - nmap
   - ssh-copy-id
   - openssl
   - wget
-  - ngrok
+  - kubectl
+  - htop
   - tldr
   - zsh-history-substring-search
 
@@ -53,13 +54,15 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - iterm2
   - dozer
-  # - licecap
-  # - slack
+  - licecap
+  - slack
   - sublime-text
+  - visual-studio-code
   - maccy
   - alfred
-  # - 1password
-  # - tiles
+  - 1password
+  - tiles
+  - fly
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
